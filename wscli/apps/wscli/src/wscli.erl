@@ -20,7 +20,7 @@ start_link() ->
 
 init([], _ConnState) ->
     websocket_client:cast(self(), {text, <<"message 1">>}),
-    {ok, 2}.
+    {ok, 1}.
 
 websocket_handle({pong, _}, _ConnState, State) ->
     {ok, State};
